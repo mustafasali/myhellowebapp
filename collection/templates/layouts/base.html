@@ -3,11 +3,15 @@
 <html>
 	<head>
 		<title>
-			<!-- we want to override page titles -->
+			{% block title %}
+			My Hello World App Project
+			{% endblock %}
 		</title>
 		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		{$ block header %}{% endblock %}
 	</head>
 	<body>
-		<!-- as well as override content bits -->
+		{% block content %}{% endblock %}
+		{% block footer %}{% endblock %}
 	</body>
 </html>
