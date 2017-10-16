@@ -2,7 +2,11 @@
 {% block title %} Homepage - {{ block.super }}{% endblock %}
 {% block content %}
     {% for thing in things %}
-    <h2>{{ thing.name }}</h2>
+    <h2>
+	    <a href="{% url 'thing_detail' slug_template=thing.slug %}">
+	    {{ thing.name }}
+	    </a>
+    </h2>
     <p>{{ thing.description }}</p>
     {% endfor %}
 {% endblock %}

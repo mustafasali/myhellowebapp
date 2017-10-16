@@ -8,3 +8,11 @@ def index(request):
     return render(request, 'index.html', { 
         'things': things,
         })
+
+def thing_detail(request, slug_template):
+    # grab the object
+    thing = Thing.objects.get(slug=slug_template)
+    # and pass it on to the template
+    return render(request, 'things/thing_detail.html', {
+        'thing': thing,
+        })
