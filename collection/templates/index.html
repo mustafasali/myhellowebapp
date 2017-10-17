@@ -3,7 +3,7 @@
 {% block content %}
     {% for thing in things %}
     <h2>
-	    <a href="{% url 'thing_detail' slug_template=thing.slug %}">
+	    <a href="{% url 'thing_detail' slug=thing.slug %}">
 	    {{ thing.name }}
 	    </a>
     </h2>
